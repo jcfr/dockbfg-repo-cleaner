@@ -11,7 +11,7 @@ RUN \
   && \
   rm -rf /var/lib/apt/lists/* && \
   apt-get clean --yes && \
-  curl -LO http://repo1.maven.org/maven2/com/madgag/bfg/1.13.0/bfg-1.13.0.jar && \
+  curl -LO https://repo1.maven.org/maven2/com/madgag/bfg/1.13.0/bfg-1.13.0.jar && \
   mv bfg-1.13.0.jar bfg.jar
 
 ENTRYPOINT ["/usr/share/bfg-repo-cleaner/entrypoint.sh", "java", "-jar", "/usr/share/bfg-repo-cleaner/bfg.jar"]
